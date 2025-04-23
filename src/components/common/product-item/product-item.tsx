@@ -47,7 +47,7 @@ function ProductItem({ item, index }: IThisProps) {
             color="primary"
             variant="faded"
             className="text-black"
-            onClick={openQuickView}
+            onPress={openQuickView}
           >
             Быстрый просмотр
           </Button>

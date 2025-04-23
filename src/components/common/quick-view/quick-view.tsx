@@ -18,7 +18,7 @@ function QuickView() {
       <DrawerContent>
         <div className="p-6">
           <div className="w-full h-[200px] flex-jc-c">
-            <Image src="/img/product-1.png" width={200} height={200} />
+            <Image src="/img/product-1.png" alt="Product image" width={200} height={200} />
           </div>
           <h1 className="text-[18px] font-bold">
             Презентационный коммутатор 5:1 с аудио микшером
