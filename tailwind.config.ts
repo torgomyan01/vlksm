@@ -72,7 +72,7 @@ export default {
         transparent: "transparent",
         white: "#FFF",
         black: "#11181C",
-        blue: "#1B59F8",
+        blue: "#1AB1BA",
       },
       transitionDuration: {
         DEFAULT: "300ms",
