@@ -11,140 +11,18 @@
 .fa-plus:before {
     content: "\2b"
 }
-
-.fa-magnifying-glass:before {
-    content: "\f002"
+.fa-minus:before {
+    content: "\f068"
 }
 
-.fa-grid-2:before {
-    content: "\e196"
-}
-.fa-user-plus:before {
-    content: "\f234"
-}
-.fa-right-to-bracket:before {
-    content: "\f2f6"
-}
 .fa-xmark-large:before {
     content: "\e59b"
-}
-
-.fa-arrow-right:before {
-    content: "\f061";
-}
-
-.fa-bars:before {
-    content: "\f0c9";
-}
-.fa-layer-group:before {
-    content: "\f5fd";
-}
-.fa-trash:before {
-    content: "\f1f8";
-}
-.fa-input-numeric:before {
-    content: "\e1bd";
-}
-.fa-house:before {
-    content: "\f015";
 }
 .fa-heart:before {
     content: "\f004";
 }
-.fa-user:before {
-    content: "\f007";
-}
-.fa-chevron-left:before {
-    content: "\f053";
-}
-
-.fa-chevron-right:before {
-    content: "\f054";
-}
-.fa-chevron-down:before {
-    content: "\f078";
-}
-.fa-circle-dollar:before {
-    content: "\f2e8";
-}
-.fa-envelope:before {
-    content: "\f0e0";
-}
-.fa-phone:before {
-    content: "\f095";
-}
-.fa-megaphone:before {
-    content: "\f675";
-}
-.fa-eye:before {
-    content: "\f06e";
-}
-.fa-copy:before {
-    content: "\f0c5";
-}
-
-.fa-chart-line-up:before {
-    content: "\e0e5";
-}
-.fa-question:before {
-    content: "\3f";
-}
-.fa-gear:before {
-    content: "\f013";
-}
-.fa-upload:before {
-    content: "\f093";
-}
-.fa-image:before {
-    content: "\f03e";
-}
-.fa-left:before {
-    content: "\f355";
-}
-.fa-toolbox:before {
-    content: "\f552";
-}
-.fa-right-from-bracket:before {
-    content: "\f2f5";
-}
-.fa-cars:before {
-    content: "\f85b";
-}
-.fa-timer:before {
-    content: "\e29e";
-}
-.fa-telegram:before {
-    content: "\f2c6";
-}
-.fa-viber:before {
-    content: "\f409";
-}
-.fa-whatsapp:before {
-    content: "\f232";
-}
-.fa-check:before {
-    content: "\f00c";
-}
-.fa-paper-plane:before {
-    content: "\f1d8";
-}
-.fa-upload:before {
-    content: "\f093";
-}
-.fa-upload:before {
-    content: "\f093";
-}
-.fa-circle-exclamation:before {
-    content: "\f06a";
-}
-.fa-comment:before {
-    content: "\f075";
-}
-.fa-star:before {
-    content: "\f005";
-}
-.fa-bars-filter:before {
-    content: "\e0ad";
+.fa-arrow-up-right:before {
+    content: "\e09f";
 }
 
 
