@@ -23,7 +23,7 @@ function MenuItem({ name, items, className = "", depth = 0 }: IThisProps) {
   };
 
   return (
-    <div className={`w-full`}>
+    <div className="w-full">
       <button
         onClick={toggleMenu}
         className={`flex justify-between items-center w-full text-[14px] text-left cursor-pointer hover:bg-gray-100 py-2 px-3 rounded-[5px] transition-all ${className}`}
@@ -31,7 +31,7 @@ function MenuItem({ name, items, className = "", depth = 0 }: IThisProps) {
         <span>{name}</span>
         {hasChildren && (
           <i
-            className={`fa-solid fa-chevron-down text-[12px] opacity-40 transform transition-transform duration-300 ${
+            className={`fa-solid fa-chevron-down text-[12px] opacity-40 transform transition-transform duration-300 dark:opacity-100 ${
               isOpen ? "rotate-180" : "rotate-0"
             }`}
           />
