@@ -1,6 +1,7 @@
 export const SITE_URL = {
   HOME: "/",
-  PRODUCT: "/catalog",
+  CATALOG: "/catalog",
+  PRODUCT: "/product",
 };
 
 const PrintItem = (name: string, children: IItem[] = []): IItem => {

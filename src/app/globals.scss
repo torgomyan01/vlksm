@@ -8,7 +8,6 @@
 }
 
 
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,6 +39,9 @@
   background: #181818;
 }
 
+html {
+  font-size: 15px;
+}
 
 body {
     color: var(--foreground);
@@ -55,13 +57,12 @@ body {
 
 .container{
   width: 100%;
-  max-width: 1260px;
+  max-width: 1440px;
   margin: 0 auto;
   @media (max-width: 1290px) {
     max-width: 100%;
   }
 }
-
 
 
 .wrapper{
@@ -80,4 +81,80 @@ body {
 
 .trans{
   transition: 0.3s !important;
+}
+
+.slick-slide{
+  height: 100%;
+}
+
+.product-slider{
+
+  .slick-arrow{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: rgba(26, 177, 186, 0.50);
+    font-size: 0;
+    z-index: 100;
+
+    &:hover, &:focus, &:active{
+      background: rgba(26, 177, 186, 0.50);
+    }
+  }
+
+  .slick-next{
+    right: 10px;
+    &:before{
+      font-family: FontAwesome;
+      content: '\f054';
+      color: #000;
+    }
+  }
+
+  .slick-prev{
+    left: 10px;
+    &:before{
+      font-family: FontAwesome;
+      content: '\f053';
+      color: #000;
+    }
+  }
+
+  .slick-slide{
+    height: 100%;
+    padding-top: 50px;
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  .slick-dots{
+    bottom: 10px;
+    li {
+      button{
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.20);
+        transition: 0.3s;
+
+        &:before{
+          display: none;
+        }
+      }
+      &.slick-active{
+        button{
+          background: #1AB1BA;
+        }
+      }
+    }
+
+  }
+
 }

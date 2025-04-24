@@ -3,6 +3,8 @@ import { Button } from "@heroui/react";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { serModalQuickView } from "@/redux/modals";
+import Link from "next/link";
+import { SITE_URL } from "@/utils/consts";
 
 interface IThisProps {
   item: {
@@ -55,7 +57,9 @@ function ProductItem({ item, index }: IThisProps) {
       </div>
       <div className="w-full flex-jsb-s flex-col h-[150px] mt-2">
         <div>
-          <h3 className="text-[15px] font-bold mt-1">{item.name}</h3>
+          <Link href={SITE_URL.PRODUCT}>
+            <h3 className="text-[15px] font-bold mt-1">{item.name}</h3>
+          </Link>
           <h5 className="text-[13px] mt-1 text-black/50">{item.code}</h5>
         </div>
 
