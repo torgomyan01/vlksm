@@ -28,7 +28,7 @@ function Page() {
       <div className="container pt-[87px]">
         <div className="w-full h-full grid grid-cols-2 gap-[20px] px-5">
           <div className="sticky top-[20px] z-10 product-slider">
-            <div className="w-full bg-blue/20 rounded-[6px]">
+            <div className="w-full bg-blue/20 rounded-[6px] h-[440px]">
               <Slider
                 ref={sliderRef}
                 {...settings}
