@@ -14,6 +14,7 @@ function Page() {
   const sliderRef = useRef<Slider | null>(null);
   const [count, setCount] = useState<number>(30);
   const [activeSlider, setActiveSlider] = useState<number>(0);
+  const [liked, setLiked] = useState(false);
 
   const settings = {
     dots: true,
@@ -25,7 +26,17 @@ function Page() {
 
   return (
     <MainTemplate>
-      <div className="container pt-[87px]">
+      <div className="container pt-[87px] relative">
+        <div
+          className="absolute top-[100px] right-[-30px] transition"
+          onClick={() => setLiked(!liked)}
+        >
+          {liked ? (
+            <i className="fa-solid fa-heart text-[#F31260] cursor-pointer text-[30px]"></i>
+          ) : (
+            <i className="fa-regular fa-heart text-[#808080] cursor-pointer text-[30px]"></i>
+          )}
+        </div>
         <div className="w-full h-full grid grid-cols-2 gap-[20px] px-5">
           <div className="sticky top-[20px] z-10 product-slider">
             <div className="w-full bg-blue/20 rounded-[6px] h-[440px]">
@@ -68,9 +79,14 @@ function Page() {
             <h1 className="text-[22px] font-bold">
               Презентационный коммутатор 5:1 с аудио микшером
             </h1>
-            <h3 className="text-[13px] mt-[10px] btext-black/50">
-              ЦТРС.468587.200.50.001
-            </h3>
+            <div className="flex-js-c gap-4">
+              <h3 className="text-[13px] mt-[10px] text-black/50">
+                ЦТРС.468587.200.50.001
+              </h3>
+              <h3 className="text-[13px] mt-[10px] text-black/50">
+                Код товара: 2834793274
+              </h3>
+            </div>
             <h2 className="text-[21px] mt-[10px]">
               1000 ₽ <span className="text-black/70 line-through">1990 ₽</span>{" "}
               <span className="text-blue">-50%</span>

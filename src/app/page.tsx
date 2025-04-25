@@ -4,10 +4,17 @@ import React, { useEffect, useState } from "react";
 import MainTemplate from "@/components/common/main-template/main-template";
 import Filter from "@/components/common/filter/filter";
 import { Input } from "@heroui/input";
-import { Pagination, Select, SelectItem, Skeleton } from "@heroui/react";
+import {
+  Button,
+  Pagination,
+  Select,
+  SelectItem,
+  Skeleton,
+} from "@heroui/react";
 import ProductItem from "@/components/common/product-item/product-item";
 import { productItem } from "@/utils/consts";
 import QuickView from "@/components/common/quick-view/quick-view";
+import { GetProducts } from "@/utils/api";
 
 export default function Home() {
   const [products, setProducts] = useState<
@@ -15,6 +22,10 @@ export default function Home() {
   >([]);
 
   useEffect(() => {
+    GetProducts().then((res) => {
+      console.log(res);
+    });
+
     setTimeout(() => {
       setProducts(productItem);
     }, 2000);
@@ -25,13 +36,17 @@ export default function Home() {
       <div className="w-full flex-js-s pt-[5px] ga-[20px]">
         <Filter />
         <div className="w-[calc(100%-300px)] pt-5 pr-5 h-[calc(100dvh-68px)] overflow-y-auto mt-[-5px]">
-          <div className="mb-6">
+          <div className="mb-6 flex-jsb-c">
             <Input
               aria-label="Input search"
               placeholder="Поиск по ID, артикулу, названию"
               type="text"
               className="w-[596px] h-[41]"
             />
+
+            <Button size="sm" className="text-[15px] font-bold">
+              Избранное
+            </Button>
           </div>
           <div className="flex-jsb-c">
             <h1 className="text-[21px] font-bold">Все товары и услуги</h1>
@@ -39,13 +54,14 @@ export default function Home() {
               className="max-w-xs"
               value="cheap"
               aria-label="select Sort"
-              defaultSelectedKeys={["Сначала дешевле"]}
+              defaultSelectedKeys={["Популярные"]}
               variant="bordered"
             >
+              <SelectItem key="Популярные">Популярные</SelectItem>
               <SelectItem key="Сначала дешевле">Сначала дешевле</SelectItem>
-              <SelectItem key="Сначала дешевле 1">Сначала дешевле 1</SelectItem>
-              <SelectItem key="Сначала дешевле 2">Сначала дешевле 2</SelectItem>
-              <SelectItem key="Сначала дешевле 3">Сначала дешевле 3</SelectItem>
+              <SelectItem key="Сначала дороже">Сначала дороже</SelectItem>
+              <SelectItem key="Сначала новые">Сначала новые</SelectItem>
+              <SelectItem key="Сначала старые">Сначала старые</SelectItem>
             </Select>
           </div>
 

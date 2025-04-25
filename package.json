@@ -1,7 +1,8 @@
 {
-  "name": "sellix",
+  "name": "VLKSM",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://5.129.197.148:8000",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

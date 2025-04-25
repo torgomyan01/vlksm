@@ -1,5 +1,12 @@
 import Image from "next/image";
-import { Button } from "@heroui/react";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from "@heroui/react";
+
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { serModalQuickView } from "@/redux/modals";
@@ -65,13 +72,42 @@ function ProductItem({ item, index }: IThisProps) {
 
         <div className="flex justify-between items-center mt-1 w-full">
           <span className="text-[18px]">{item.price}</span>
-          <Button
-            color="primary"
-            variant="flat"
-            className="bg-[#1AB1BA1A] w-[67px] text-[#1AB1BA] font-bold h-[30px] rounded-[6px]"
-          >
-            <i className="fa-solid fa-plus text-[18px]"></i>в КП
-          </Button>
+
+          <Dropdown>
+            <DropdownTrigger>
+              <Button
+                color="primary"
+                variant="flat"
+                className="bg-[#1AB1BA1A] w-[67px] text-[#1AB1BA] font-bold h-[30px] rounded-[6px]"
+              >
+                <i className="fa-solid fa-plus text-[18px]"></i>в КП
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Static Actions">
+              <DropdownItem key="12">
+                <span className="w-[60px] text-black/50">№12</span>
+                <span className="mx-2">Прогресс</span>
+                <span className="text-black/50">11 211 ₽</span>
+              </DropdownItem>
+              <DropdownItem key="1321">
+                <span className="w-[60px] text-black/50">№1321</span>
+                <span className="mx-2">Автоматизация плюс</span>
+                <span className="text-black/50">19 274 ₽</span>
+              </DropdownItem>
+              <DropdownItem key="14">
+                <span className="w-[60px] text-black/50">№14</span>
+                <span className="mx-2">ООО «СуперПром»</span>
+                <span className="text-black/50">123 204 ₽</span>
+              </DropdownItem>
+              <DropdownItem key="15">
+                <span className="w-[60px] text-black/50">№15</span>
+                <span className="mx-2">ИП Сорокин М. Г.</span>
+                <span className="text-black/50">39 244 ₽</span>
+              </DropdownItem>
+              <DropdownItem key="Выбрать">Выбрать КП из реестра</DropdownItem>
+              <DropdownItem key="Новое">Новое КП</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </div>
       </div>
     </div>
