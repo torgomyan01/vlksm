@@ -6,15 +6,18 @@ import Filter from "@/components/common/filter/filter";
 import { Input } from "@heroui/input";
 import {
   Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
   Pagination,
   Select,
   SelectItem,
   Skeleton,
 } from "@heroui/react";
 import ProductItem from "@/components/common/product-item/product-item";
-import { productItem } from "@/utils/consts";
+import { productItem, SITE_URL } from "@/utils/consts";
 import QuickView from "@/components/common/quick-view/quick-view";
-import { GetProducts } from "@/utils/api";
 
 export default function Home() {
   const [products, setProducts] = useState<
@@ -22,9 +25,9 @@ export default function Home() {
   >([]);
 
   useEffect(() => {
-    GetProducts().then((res) => {
-      console.log(res);
-    });
+    // GetProducts().then((res) => {
+    //   console.log(res);
+    // });
 
     setTimeout(() => {
       setProducts(productItem);
@@ -44,9 +47,28 @@ export default function Home() {
               className="w-[596px] h-[41]"
             />
 
-            <Button size="sm" className="text-[15px] font-bold">
-              Избранное
-            </Button>
+            <div className="flex-jse-c gap-2">
+              <Button size="sm" className="text-[15px] font-bold">
+                Избранное
+              </Button>
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button
+                    size="sm"
+                    className="bg-blue text-white text-[15px] font-bold"
+                  >
+                    <i className="fa-solid fa-plus mr-1"></i>
+                    Новый товар или услуга
+                  </Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Create Servicess">
+                  <DropdownItem key="12">Услуга</DropdownItem>
+                  <DropdownItem key="1321">Реализуемый товар</DropdownItem>
+                  <DropdownItem key="14">Заменяемый товар</DropdownItem>
+                  <DropdownItem key="15">Импорт из CVS/XLS</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+            </div>
           </div>
           <div className="flex-jsb-c">
             <h1 className="text-[21px] font-bold">Все товары и услуги</h1>

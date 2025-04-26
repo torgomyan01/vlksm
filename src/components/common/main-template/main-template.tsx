@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Avatar, HeroUIProvider, ToastProvider } from "@heroui/react";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
+import { SITE_URL } from "@/utils/consts";
 
 interface IThisProps {
   children: React.ReactNode;
@@ -18,7 +19,9 @@ function MainTemplate({ children }: IThisProps) {
         <div className="w-full ">
           <nav className="border-b h-[58px] flex-jsb-c px-[20px]">
             <div className="w-[286px]">
-              <Image src={logo} alt="logo" width={70} height={18} />
+              <Link href={SITE_URL.HOME}>
+                <Image src={logo} alt="logo" width={70} height={18} />
+              </Link>
             </div>
             <div className="w-[calc(100%_-_284px)] h-full flex-jsb-c">
               <div className="flex-js-c h-full gap-[30px] mt-[1px]">

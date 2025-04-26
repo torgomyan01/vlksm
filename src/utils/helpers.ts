@@ -10,3 +10,14 @@ export const RandomKey = (length = 5) => {
   }
   return result;
 };
+
+export const encodeImageFileAsURL = (
+  file: any,
+  callback: (res: any) => void,
+) => {
+  const reader = new FileReader();
+  reader.onloadend = function () {
+    callback(reader.result);
+  };
+  reader.readAsDataURL(file);
+};
