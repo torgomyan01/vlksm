@@ -16,7 +16,7 @@ import {
   Skeleton,
 } from "@heroui/react";
 import ProductItem from "@/components/common/product-item/product-item";
-import { productItem, SITE_URL } from "@/utils/consts";
+import { productItem } from "@/utils/consts";
 import QuickView from "@/components/common/quick-view/quick-view";
 
 export default function Home() {
