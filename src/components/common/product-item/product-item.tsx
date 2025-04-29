@@ -9,7 +9,7 @@ import {
 
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { serModalQuickView } from "@/redux/modals";
+import { serModalKP, serModalQuickView } from "@/redux/modals";
 import Link from "next/link";
 import { SITE_URL } from "@/utils/consts";
 
@@ -28,6 +28,10 @@ function ProductItem({ item, index }: IThisProps) {
 
   function openQuickView() {
     dispatch(serModalQuickView(true));
+  }
+
+  function openModalKP() {
+    dispatch(serModalKP(true));
   }
 
   return (
@@ -104,7 +108,9 @@ function ProductItem({ item, index }: IThisProps) {
                 <span className="mx-2">ИП Сорокин М. Г.</span>
                 <span className="text-black/50">39 244 ₽</span>
               </DropdownItem>
-              <DropdownItem key="Выбрать">Выбрать КП из реестра</DropdownItem>
+              <DropdownItem key="Выбрать" onPress={openModalKP}>
+                Выбрать КП из реестра
+              </DropdownItem>
               <DropdownItem key="Новое">Новое КП</DropdownItem>
             </DropdownMenu>
           </Dropdown>

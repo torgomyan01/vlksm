@@ -27,6 +27,9 @@
 .fa-arrow-up-right:before {
     content: "\e09f";
 }
+.fa-chevron-left:before {
+    content: "\f053";
+}
 
 
 /*---------------------------------*/

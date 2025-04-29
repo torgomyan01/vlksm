@@ -18,6 +18,7 @@ import {
 import ProductItem from "@/components/common/product-item/product-item";
 import { productItem } from "@/utils/consts";
 import QuickView from "@/components/common/quick-view/quick-view";
+import ModalLogin from "@/components/common/modals/modal-kp";
 
 export default function Home() {
   const [products, setProducts] = useState<
@@ -25,8 +26,8 @@ export default function Home() {
   >([]);
 
   useEffect(() => {
-    // GetProducts().then((res) => {
-    //   console.log(res);
+    // GetProducts(10, 1).then(({ data }) => {
+    //   console.log(data.results);
     // });
 
     setTimeout(() => {
@@ -147,6 +148,7 @@ export default function Home() {
         </div>
       </div>
       <QuickView />
+      <ModalLogin />
     </MainTemplate>
   );
 }

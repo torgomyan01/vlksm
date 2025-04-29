@@ -12,6 +12,11 @@ const PrintItem = (name: string, children: IItem[] = []): IItem => {
   };
 };
 
+export const localStorageKeys = {
+  accessToken: "accessToken",
+  refreshToken: "refreshToken",
+};
+
 const child = [
   "Коммутаторы сигналов",
   "Матричные коммутаторы",
