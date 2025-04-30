@@ -1,5 +1,5 @@
 import ProductItem from "@/components/common/product-item/product-item";
-import { Pagination, Select, SelectItem, Skeleton } from "@heroui/react";
+import { Pagination, Select, SelectItem } from "@heroui/react";
 import React, { useEffect, useState } from "react";
 import { GetProducts } from "@/utils/api";
 import ProductLoading from "@/components/layout/catalog/product-loading";

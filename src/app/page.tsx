@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MainTemplate from "@/components/common/main-template/main-template";
 import Filter from "@/components/common/filter/filter";
 import { Input } from "@heroui/input";
@@ -13,10 +13,8 @@ import {
   Select,
   SelectItem,
 } from "@heroui/react";
-import { productItem } from "@/utils/consts";
 import QuickView from "@/components/common/quick-view/quick-view";
 import ModalLogin from "@/components/common/modals/modal-kp";
-import { GetProducts } from "@/utils/api";
 import CatalogProductsBody from "@/components/layout/catalog/catalog-products-body";
 
 export default function Home() {
