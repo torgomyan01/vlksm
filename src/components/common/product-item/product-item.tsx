@@ -5,6 +5,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
+  Snippet,
 } from "@heroui/react";
 
 import React, { useState } from "react";
@@ -14,11 +15,7 @@ import Link from "next/link";
 import { SITE_URL } from "@/utils/consts";
 
 interface IThisProps {
-  item: {
-    name: string;
-    code: string;
-    price: string;
-  };
+  item: IProduct;
   index: number;
 }
 
@@ -71,11 +68,21 @@ function ProductItem({ item, index }: IThisProps) {
           <Link href={SITE_URL.PRODUCT}>
             <h3 className="text-[15px] font-bold mt-1">{item.name}</h3>
           </Link>
-          <h5 className="text-[13px] mt-1 text-black/50">{item.code}</h5>
+          <h5 className="text-[13px] mt-1 text-black/50">
+            <Snippet
+              className="bg-transparent pl-0 text-black/50 py-0"
+              symbol="Артикул:"
+            >
+              {item.unit}
+            </Snippet>
+          </h5>
         </div>
 
         <div className="flex justify-between items-center mt-1 w-full">
-          <span className="text-[18px]">{item.price}</span>
+          <span className="text-[18px]">
+            {Math.floor(Math.random() * 100)} {Math.floor(Math.random() * 1000)}{" "}
+            ₽
+          </span>
 
           <Dropdown>
             <DropdownTrigger>

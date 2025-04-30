@@ -19,7 +19,7 @@ interface IModalsState {
   };
 }
 
-interface IProducts {
+interface IProduct {
   article: string;
   category: number;
   description: string;

@@ -91,7 +91,7 @@ function Page() {
               1000 ₽ <span className="text-black/70 line-through">1990 ₽</span>{" "}
               <span className="text-blue">-50%</span>
             </h2>
-            <div className="p-[10px] bg-[#F3F6F8] rounded-[10px] mt-4 mb-[71px]">
+            <div className="p-[10px] bg-[#F3F6F8] rounded-[10px] mt-4 mb-5">
               <div className="flex-jsb-c">
                 <b className="text-[15px]">В КП</b>
                 <span className="text-[15px] text-black/50">Последние КП</span>
@@ -167,6 +167,57 @@ function Page() {
                 >
                   Добавить на 120 000 ₽
                 </Button>
+              </div>
+            </div>
+
+            <div className="p-[10px] bg-[#F3F6F8] rounded-[10px] mt-4 mb-6">
+              <div className="flex-jsb-c">
+                <b className="text-[15px]">Добавлено в КП</b>
+              </div>
+
+              <div className="w-full mt-4">
+                <div className="flex-jsb-c mb-2">
+                  <div className="w-[70%] flex-js-c">
+                    <span className="block w-[50px] min-w-[50px] text-black/50 text-[15px]">
+                      №14
+                    </span>
+                    <span className="mr-4">Автоматизация плюс</span>
+                    <span className="text-nowrap text-black/50">123 204 ₽</span>
+                  </div>
+                  <div>
+                    <div className="px-2 h-[28px] rounded-[6px] flex-jsb-c bg-black/5">
+                      <i className="fa-solid fa-minus text-blue text-[18px] cursor-pointer" />
+                      <span className="mx-2 text-[15px] w-[50px] text-nowrap flex-jc-c">
+                        30 шт.
+                      </span>
+                      <i className="fa-solid fa-plus text-blue text-[18px] cursor-pointer" />
+                    </div>
+                    <div className="text-black/50 text-right mt-1">
+                      13 234 000 ₽
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-jsb-c">
+                  <div className="w-[70%] flex-js-c">
+                    <span className="block w-[50px] min-w-[50px] text-black/50 text-[15px]">
+                      №14
+                    </span>
+                    <span className="mr-4">ООО «СуперПром»</span>
+                    <span className="text-nowrap text-black/50">13 234 ₽</span>
+                  </div>
+                  <div>
+                    <div className="px-2 h-[28px] rounded-[6px] flex-jsb-c bg-black/5">
+                      <i className="fa-solid fa-minus text-blue text-[18px] cursor-pointer" />
+                      <span className="mx-2 text-[15px] w-[50px] text-nowrap flex-jc-c">
+                        30 шт.
+                      </span>
+                      <i className="fa-solid fa-plus text-blue text-[18px] cursor-pointer" />
+                    </div>
+                    <div className="text-black/50 text-right mt-1">
+                      13 234 000 ₽
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
